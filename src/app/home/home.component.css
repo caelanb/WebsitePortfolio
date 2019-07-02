@@ -1,0 +1,30 @@
+.toolbar-name {
+    letter-spacing: 5px;
+}
+
+.banner {
+    background-color: cyan;
+    text-align: center;
+    height: 300px;
+    margin-top: 0px;
+}
+
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+.navigation-spacer {
+    display: inline-block;
+    margin: 20px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3%;
+}
+
+.about-section {
+    width: 50%;
+}

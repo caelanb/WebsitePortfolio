@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.mat-toolbar.mat-primary {
+    background: #ffffff;
+    color: #000000;
+}
+
+.mat-sidenav-container {
+    background: #ffffff;
+}
+
+h1 {
+    margin: 0px;
+}
