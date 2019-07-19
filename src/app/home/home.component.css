@@ -5,8 +5,11 @@
 .banner {
     background-color: cyan;
     text-align: center;
-    height: 300px;
+    height: 400px;
     margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .toolbar-spacer {
@@ -28,3 +31,10 @@
 .about-section {
     width: 50%;
 }
+
+img {
+    border-radius: 50%;
+    border:5px solid black;
+    width: 200px;
+    height: 200px;
+  }
