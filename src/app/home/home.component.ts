@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { faLinkedin, faFacebookSquare, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  faLinkedIn = faLinkedin;
+  faFacebookSquare = faFacebookSquare;
+  faGithubSquare = faGithubSquare;
+  faEnvelopeSquare = faEnvelopeSquare;
 
   constructor( private router: Router ) { }
 

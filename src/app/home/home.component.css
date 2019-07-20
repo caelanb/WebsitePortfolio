@@ -21,6 +21,11 @@
     margin: 20px;
 }
 
+.icon-spacer {
+    display: inline-block;
+    margin: 10px;
+}
+
 .about-container {
     display: flex;
     align-items: center;
@@ -37,4 +42,9 @@ img {
     border:5px solid black;
     width: 200px;
     height: 200px;
-  }
+}
+
+.fa-icon {
+    width: 50px;
+    height: 50px;
+}
