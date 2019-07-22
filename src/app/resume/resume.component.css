@@ -1,0 +1,39 @@
+.toolbar-name {
+    letter-spacing: 5px;
+}
+
+.banner {
+    background-color: cyan;
+    text-align: center;
+    height: 100px;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+.navigation-spacer {
+    display: inline-block;
+    margin: 20px;
+}
+
+.icon-spacer {
+    display: inline-block;
+    margin: 10px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3%;
+}
+
+a {
+    text-decoration:none;
+    color: inherit;
+}

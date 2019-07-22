@@ -9,12 +9,14 @@ import { MaterialModule } from './material.module';
 import { ProjectsComponent } from './projects/projects.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,

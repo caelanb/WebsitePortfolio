@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
   }
 
   onResumeClick() {
-    console.log('hi');
+    this.router.navigateByUrl('resume');
   }
 
   ngOnInit() {
