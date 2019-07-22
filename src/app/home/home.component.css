@@ -37,6 +37,13 @@
     width: 50%;
 }
 
+.skills-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3%;
+}
+
 img {
     border-radius: 50%;
     border:5px solid black;
@@ -52,4 +59,97 @@ img {
 a {
     text-decoration:none;
     color: inherit;
+}
+
+.card {
+    width: 80%;
+    background-color: cyan;
+  }
+
+.mat-divider {
+    width: 95%;
+}
+
+.devicon-java-plain-wordmark {
+    font-size: 4rem;
+}
+
+.devicon-python-plain-wordmark {
+    font-size: 4rem;
+}
+
+.devicon-c-plain-wordmark {
+    font-size: 4rem;
+}
+
+.devicon-cplusplus-plain-wordmark {
+    font-size: 4rem;
+}
+
+.devicon-typescript-plain {
+    font-size: 4rem;
+}
+
+.devicon-windows8-original {
+    font-size: 4rem;
+}
+
+.devicon-linux-plain {
+    font-size: 4rem;
+}
+
+.devicon-apple-original {
+    font-size: 4rem;
+}
+
+.devicon-django-plain-wordmark {
+    font-size: 4rem;
+}
+
+.devicon-angularjs-plain-wordmark {
+    font-size: 4rem;
+}
+
+.devicon-github-plain-wordmark {
+    font-size: 4rem;
+}
+
+.devicon-gitlab-plain-wordmark {
+    font-size: 4rem;
+}
+
+.devicon-mysql-plain-wordmark {
+    font-size: 4rem;
+}
+
+.icon-spacer {
+    display: inline-block;
+    margin: 10px;
+}
+
+h4 {
+    width: 70%;
+    margin: .7em auto;
+    overflow: hidden;
+    text-align: center;
+    font-weight:300;
+    color: black;
+}
+
+h4:before, h4:after {
+    content: "";
+    display: inline-block;
+    width: 50%;
+    margin: 0 .5em 0 -55%;
+    vertical-align: middle;
+    border-bottom: 1px solid;
+}
+
+h4:after {
+    margin: 0 -55% 0 .5em;
+}
+
+span {
+    display: inline-block;
+    vertical-align: middle;
 }
