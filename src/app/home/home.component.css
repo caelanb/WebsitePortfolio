@@ -34,7 +34,11 @@
 }
 
 .about-section {
-    width: 50%;
+    width: 70%;
+}
+
+.about-section-mobile {
+    width: 90%;
 }
 
 .skills-section {
@@ -64,62 +68,118 @@ a {
 .card {
     width: 80%;
     background-color: cyan;
-  }
+}
+
+.card-mobile {
+    background-color: cyan;
+}
 
 .mat-divider {
     width: 95%;
 }
 
-.devicon-java-plain-wordmark {
-    font-size: 4rem;
+.devicon-java-plain-wordmark.full {
+    font-size: 3rem;
 }
 
-.devicon-python-plain-wordmark {
-    font-size: 4rem;
+.devicon-java-plain-wordmark.mobile {
+    font-size: 2.5rem;
 }
 
-.devicon-c-plain-wordmark {
-    font-size: 4rem;
+.devicon-python-plain-wordmark.full {
+    font-size: 3rem;
 }
 
-.devicon-cplusplus-plain-wordmark {
-    font-size: 4rem;
+.devicon-python-plain-wordmark.mobile {
+    font-size: 2.5rem;
 }
 
-.devicon-typescript-plain {
-    font-size: 4rem;
+.devicon-c-plain-wordmark.full {
+    font-size: 3rem;
 }
 
-.devicon-windows8-original {
-    font-size: 4rem;
+.devicon-c-plain-wordmark.mobile {
+    font-size: 2.5rem;
 }
 
-.devicon-linux-plain {
-    font-size: 4rem;
+.devicon-cplusplus-plain-wordmark.full {
+    font-size: 3rem;
 }
 
-.devicon-apple-original {
-    font-size: 4rem;
+.devicon-cplusplus-plain-wordmark.mobile {
+    font-size: 2.5rem;
 }
 
-.devicon-django-plain-wordmark {
-    font-size: 4rem;
+.devicon-typescript-plain.full {
+    font-size: 3rem;
 }
 
-.devicon-angularjs-plain-wordmark {
-    font-size: 4rem;
+.devicon-typescript-plain.mobile {
+    font-size: 2.5rem;
 }
 
-.devicon-github-plain-wordmark {
-    font-size: 4rem;
+.devicon-windows8-original.full {
+    font-size: 3rem;
 }
 
-.devicon-gitlab-plain-wordmark {
-    font-size: 4rem;
+.devicon-windows8-original.mobile {
+    font-size: 2.5rem;
 }
 
-.devicon-mysql-plain-wordmark {
-    font-size: 4rem;
+.devicon-linux-plain.full {
+    font-size: 3rem;
+}
+
+.devicon-linux-plain.mobile {
+    font-size: 2.5rem;
+}
+
+.devicon-apple-original.full {
+    font-size: 3rem;
+}
+
+.devicon-apple-original.mobile {
+    font-size: 2.5rem;
+}
+
+.devicon-django-plain-wordmark.full {
+    font-size: 3rem;
+}
+
+.devicon-django-plain-wordmark.mobile {
+    font-size: 2.5rem;
+}
+
+.devicon-angularjs-plain-wordmark.full {
+    font-size: 3rem;
+}
+
+.devicon-angularjs-plain-wordmark.mobile {
+    font-size: 2.5rem;
+}
+
+.devicon-github-plain-wordmark.full {
+    font-size: 3rem;
+}
+
+.devicon-github-plain-wordmark.mobile {
+    font-size: 2.5rem;
+}
+
+.devicon-gitlab-plain-wordmark.full {
+    font-size: 3rem;
+}
+
+.devicon-gitlab-plain-wordmark.mobile {
+    font-size: 2.5rem;
+}
+
+.devicon-mysql-plain-wordmark.full {
+    font-size: 3rem;
+}
+
+.devicon-mysql-plain-wordmark.mobile {
+    font-size: 2.5rem;
 }
 
 .icon-spacer {
@@ -128,7 +188,6 @@ a {
 }
 
 h4 {
-    width: 70%;
     margin: .7em auto;
     overflow: hidden;
     text-align: center;
@@ -152,4 +211,9 @@ h4:after {
 span {
     display: inline-block;
     vertical-align: middle;
+}
+
+.i {
+    height: auto;
+    width: auto;
 }

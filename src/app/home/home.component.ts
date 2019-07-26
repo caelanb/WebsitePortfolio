@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { faLinkedin, faFacebookSquare, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelopeSquare, faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +14,10 @@ export class HomeComponent implements OnInit {
   faFacebookSquare = faFacebookSquare;
   faGithubSquare = faGithubSquare;
   faEnvelopeSquare = faEnvelopeSquare;
+  faBars = faBars;
+  opened: boolean;
+  showToolbarNav: boolean;
+  innerWidth: any;
 
   constructor( private router: Router ) { }
 
@@ -29,7 +33,25 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl('resume');
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
+
+    if (this.innerWidth < 800) {
+      this.showToolbarNav = true;
+    } else {
+      this.showToolbarNav = false;
+    }
+  }
+
   ngOnInit() {
+    this.innerWidth = window.innerWidth;
+
+    if (this.innerWidth < 800) {
+      this.showToolbarNav = true;
+    } else {
+      this.showToolbarNav = false;
+    }
   }
 
 }

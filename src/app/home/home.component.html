@@ -1,19 +1,37 @@
 <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
 <mat-sidenav-container fullscreen>
-    <mat-toolbar color="primary">
+  
+  <mat-sidenav #sidenav position="end" [(opened)]="opened">
+    <button mat-button (click)='onProjectsClick()'>PROJECTS</button>
+    <br>
+    <button mat-button (click)='onResumeClick()'>RESUME</button>
+  </mat-sidenav>
+  
+  <mat-sidenav-content>
+  <mat-toolbar color="primary">
         <a [routerLink]="['/home']"><span class='toolbar-name'><b>CAELAN BRYAN</b></span></a>
-        <span class="toolbar-spacer"></span>
-        <span><button mat-button (click)='onProjectsClick()'>PROJECTS</button></span>
-        <span class="navigation-spacer"></span>
-        <span><button mat-button (click)='onResumeClick()'>RESUME</button></span>
+        <ng-container *ngIf="showToolbarNav == false">
+          <span class="toolbar-spacer"></span>
+          <span><button mat-button (click)='onProjectsClick()'>PROJECTS</button></span>
+          <span class="navigation-spacer"></span>
+          <span><button mat-button (click)='onResumeClick()'>RESUME</button></span>
+        </ng-container>
+        <ng-container *ngIf="showToolbarNav == true">
+            <span class="toolbar-spacer"></span>
+            <span><fa-icon [icon]="faBars" (click)="sidenav.toggle()" size="1.5x"></fa-icon></span>
+        </ng-container>
       </mat-toolbar>
+
+      
 
       <div class="banner">
         <div>
             <img alt="portfolio-picture" src="./assets/images/homepage-image.png">
             <h2>Caelan Bryan</h2>
             <h3><i>Junior Software Engineer</i></h3>
+            <br>
             <a href="https://www.linkedin.com/in/caelan-bryan-9748a7161/"><fa-icon [icon]="faLinkedIn" size="2x"></fa-icon></a>
             <span class="icon-spacer"></span>
             <a href="https://github.com/caelanb"><fa-icon [icon]="faGithubSquare" size="2x"></fa-icon></a>
@@ -25,6 +43,12 @@
       </div>
 
       <div class="about-container">
+        
+
+
+
+
+        <ng-container *ngIf="showToolbarNav == false">
         <div class="about-section">
           <h3>About Me</h3>
           <p>Hi. I'm Caelan Bryan and I'm a software developer from the Omaha area. I attended the University of Nebraska at Omaha where 
@@ -39,44 +63,38 @@
           </p>
           <div class="skills-section">
           <mat-card class="card">
-              <mat-card-header>
-                  <h4>Languages</h4>
-              </mat-card-header>
+                <h4>Languages</h4>
               <mat-card-content class="skills-section">
-                  <span class="icon-spacer"><i class="devicon-java-plain-wordmark"></i></span>
-                  <span class="icon-spacer"><i class="devicon-python-plain-wordmark"></i></span>
-                  <span class="icon-spacer"><i class="devicon-c-plain-wordmark"></i></span>
-                  <span class="icon-spacer"><i class="devicon-cplusplus-plain-wordmark"></i></span>
+                  <span class="icon-spacer"><i class="devicon-java-plain-wordmark full"></i></span>
+                  <span class="icon-spacer"><i class="devicon-python-plain-wordmark full"></i></span>
+                  <span class="icon-spacer"><i class="devicon-c-plain-wordmark full"></i></span>
+                  <span class="icon-spacer"><i class="devicon-cplusplus-plain-wordmark full"></i></span>
                   <span class="icon-spacer"></span>
-                  <span><i class="devicon-typescript-plain"></i></span>
+                  <span><i class="devicon-typescript-plain full"></i></span>
               </mat-card-content>
           </mat-card>
           </div>
           <div class="skills-section">
               <mat-card class="card">
-                  <mat-card-header>
-                      <h4>Platforms and Frameworks</h4>
-                  </mat-card-header>
+                    <h4>Platforms and Frameworks</h4>
                   <mat-card-content class="skills-section">
-                      <span class="icon-spacer"><i class="devicon-windows8-original"></i></span>
-                      <span class="icon-spacer"><i class="devicon-linux-plain"></i></span>
-                      <span class="icon-spacer"><i class="devicon-apple-original"></i></span>
-                      <span class="icon-spacer"><i class="devicon-django-plain-wordmark"></i></span>
+                      <span class="icon-spacer"><i class="devicon-windows8-original full"></i></span>
+                      <span class="icon-spacer"><i class="devicon-linux-plain full"></i></span>
+                      <span class="icon-spacer"><i class="devicon-apple-original full"></i></span>
+                      <span class="icon-spacer"><i class="devicon-django-plain-wordmark full"></i></span>
                       <span class="icon-spacer"></span>
-                      <span><i class="devicon-angularjs-plain-wordmark"></i></span>
+                      <span><i class="devicon-angularjs-plain-wordmark full"></i></span>
                   </mat-card-content>
               </mat-card>
            </div>
            <div class="skills-section">
               <mat-card class="card">
-                  <mat-card-header>
-                      <h4>Other</h4>
-                  </mat-card-header>
+                    <h4>Other</h4>
                   <mat-card-content class="skills-section">
-                      <span class="icon-spacer"><i class="devicon-github-plain-wordmark"></i></span>
-                      <span class="icon-spacer"><i class="devicon-gitlab-plain-wordmark"></i></span>
+                      <span class="icon-spacer"><i class="devicon-github-plain-wordmark full"></i></span>
+                      <span class="icon-spacer"><i class="devicon-gitlab-plain-wordmark full"></i></span>
                       <span class="icon-spacer"></span>
-                      <span><i class="devicon-mysql-plain-wordmark"></i></span>
+                      <span><i class="devicon-mysql-plain-wordmark full"></i></span>
                   </mat-card-content>
               </mat-card>
            </div>
@@ -193,8 +211,182 @@
               </mat-tab>
           </mat-tab-group>            
         </div>
+        </ng-container>
+
+
+
+        <ng-container *ngIf="showToolbarNav == true">
+        <div class="about-section-mobile">
+            <h3>About Me</h3>
+            <p>Hi. I'm Caelan Bryan and I'm a software developer from the Omaha area. I attended the University of Nebraska at Omaha where 
+              I graduated with a Bachelor of Science in Computer Science in May 2019. As I progressed through my undergraduate degree I found
+              myself interested in the cybersecurity and mathematics classes I was taking, and specifically, how they were relating back
+              to what I was learning in my computer science classes. I decided to persue a minor in both of these subjects to learn and 
+              better understand them. I'm excited to continue my career and learn new skills.</p>
+              <hr>
+            <h3>Skills</h3>
+            <p>Throughout my undergraduate degree, internship, and through personal projects I have picked up skills in multiple different
+              areas of information technology.
+            </p>
+            <div class="skills-section">
+            <mat-card class="card-mobile">
+                  <h4>Languages</h4>
+                <mat-card-content class="skills-section">
+                    <span class="icon-spacer"><i class="devicon-java-plain-wordmark mobile"></i></span>
+                    <span class="icon-spacer"><i class="devicon-python-plain-wordmark mobile"></i></span>
+                    <span class="icon-spacer"><i class="devicon-c-plain-wordmark mobile"></i></span>
+                    <span class="icon-spacer"><i class="devicon-cplusplus-plain-wordmark mobile"></i></span>
+                    <span class="icon-spacer"></span>
+                    <span><i class="devicon-typescript-plain mobile"></i></span>
+                </mat-card-content>
+            </mat-card>
+            </div>
+            <div class="skills-section">
+                <mat-card class="card-mobile">
+                      <h4>Platforms and Frameworks</h4>
+                    <mat-card-content class="skills-section">
+                        <span class="icon-spacer"><i class="devicon-windows8-original mobile"></i></span>
+                        <span class="icon-spacer"><i class="devicon-linux-plain mobile"></i></span>
+                        <span class="icon-spacer"><i class="devicon-apple-original mobile"></i></span>
+                        <span class="icon-spacer"><i class="devicon-django-plain-wordmark mobile"></i></span>
+                        <span class="icon-spacer"></span>
+                        <span><i class="devicon-angularjs-plain-wordmark mobile"></i></span>
+                    </mat-card-content>
+                </mat-card>
+             </div>
+             <div class="skills-section">
+                <mat-card class="card-mobile">
+                      <h4>Other</h4>
+                    <mat-card-content class="skills-section">
+                        <span class="icon-spacer"><i class="devicon-github-plain-wordmark mobile"></i></span>
+                        <span class="icon-spacer"><i class="devicon-gitlab-plain-wordmark mobile"></i></span>
+                        <span class="icon-spacer"></span>
+                        <span><i class="devicon-mysql-plain-wordmark mobile"></i></span>
+                    </mat-card-content>
+                </mat-card>
+             </div>
+            <hr>
+            <h3>Relevant Coursework</h3>
+            <mat-tab-group>
+                <mat-tab label="Computer Science">
+                  <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Data Structures
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      Runtime analysis, sorting algorithms, and common data structures (binary trees, stacks, queues, etc)
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Theory of Computation
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      Non-deterministic and deterministic finite automatons, regular languages, and turing machines
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Operating Systems
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      Multithreaded programming and common hardware limitations on modern computers
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Principles of Programming Languages
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      Syntax trees, parse trees, and functional programming
+                    </mat-expansion-panel>
+                      <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                          <mat-panel-title>
+                            Software Engineering
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        Proper development practices
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </mat-tab>
+                <mat-tab label="Cybersecurity">
+                  <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Windows Administration
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      Created and maintained a Windows Server 2008 instance
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Information Security Policy
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    Security practices and writing policies for large companies
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Computer Forensics
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      Extracting data from devices that have been destroyed or where the data was deleted
+                    </mat-expansion-panel>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Foundations of Information Assurance
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      Final overview of cybersecurity
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </mat-tab>
+                <mat-tab label="Mathematics">
+                  <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Mathematical Foundations of Computer Science
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                          Big-O notation and truth tables
+                        </mat-expansion-panel>
+                          <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                  Numerical Methods
+                              </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            Writing programs to approximate zeros, derivatives, and integrals
+                          </mat-expansion-panel>
+                            <mat-expansion-panel>
+                              <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Number Theory and Cryptography
+                                </mat-panel-title>
+                              </mat-expansion-panel-header>
+                              Studied the integers and how certain truths explain why cryptography works
+                            </mat-expansion-panel>
+                            </mat-accordion>
+                </mat-tab>
+            </mat-tab-group>            
+          </div>
+        </ng-container>
+
+
+
+
       </div>
+    </mat-sidenav-content>  
 </mat-sidenav-container>
+
 
 
 

@@ -1,10 +1,25 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
 <mat-sidenav-container fullscreen>
-        <mat-toolbar color="primary">
-          <a [routerLink]="['/home']"><span class='toolbar-name'><b>CAELAN BRYAN</b></span></a>
-            <span class="toolbar-spacer"></span>
-            <span><button mat-button (click)='onProjectsClick()'>PROJECTS</button></span>
-            <span class="navigation-spacer"></span>
-            <span><button mat-button (click)='onResumeClick()'>RESUME</button></span>
+    <mat-sidenav #sidenav position="end" [(opened)]="opened">
+        <button mat-button (click)='onProjectsClick()'>PROJECTS</button>
+        <br>
+        <button mat-button (click)='onResumeClick()'>RESUME</button>
+      </mat-sidenav>
+      
+      <mat-sidenav-content>
+      <mat-toolbar color="primary">
+            <a [routerLink]="['/home']"><span class='toolbar-name'><b>CAELAN BRYAN</b></span></a>
+            <ng-container *ngIf="showToolbarNav == false">
+              <span class="toolbar-spacer"></span>
+              <span><button mat-button (click)='onProjectsClick()'>PROJECTS</button></span>
+              <span class="navigation-spacer"></span>
+              <span><button mat-button (click)='onResumeClick()'>RESUME</button></span>
+            </ng-container>
+            <ng-container *ngIf="showToolbarNav == true">
+                <span class="toolbar-spacer"></span>
+                <span><fa-icon [icon]="faBars" (click)="sidenav.toggle()" size="1.5x"></fa-icon></span>
+            </ng-container>
           </mat-toolbar>
     
           <div class="banner">
@@ -19,4 +34,5 @@
             </div> --> 
             <h3>Coming Soon</h3>
           </div>
+          </mat-sidenav-content>
     </mat-sidenav-container>

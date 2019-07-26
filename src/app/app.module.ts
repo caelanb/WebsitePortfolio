@@ -12,6 +12,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ResumeComponent } from './resume/resume.component';
 
+import { CommonModule } from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,7 @@ import { ResumeComponent } from './resume/resume.component';
     MaterialModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

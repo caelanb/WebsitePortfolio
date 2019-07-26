@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 import {
   MatButtonModule,
   MatIconModule,
@@ -23,6 +24,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatDividerModule,
     MatTabsModule,
     MatExpansionModule,
+    BrowserModule,
+    CommonModule,
   ],
   exports: [
     MatButtonModule,
