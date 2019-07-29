@@ -49,4 +49,8 @@ export class ResumeComponent implements OnInit {
     this.router.navigateByUrl('resume');
   }
 
+  onDownloadClick() {
+    location.href = '/assets/files/CaelanBryanResume.pdf';
+  }
+
 }
