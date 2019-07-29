@@ -29,14 +29,11 @@
 }
 
 .about-section {
-    width: 50%;
+    width: 70%;
 }
 
-img {
-    border-radius: 50%;
-    border:5px solid black;
-    width: 200px;
-    height: 200px;
+.about-section-mobile {
+    width: 90%;
 }
 
 a {

@@ -29,10 +29,107 @@
           </div>
     
           <div class="about-container">
-            <!-- <div class="about-section">
-              <h3>Coming Soon!</h3>
-            </div> --> 
-            <h3>Coming Soon</h3>
-          </div>
+              <ng-container *ngIf="showToolbarNav == false">
+                <div class="about-section">
+                  <h3>Jeroo Web</h3>
+                  <h6><a href="https://jeroo.org/beta">https://jeroo.org/beta</a></h6>
+                  <br>
+                  <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+                    <mdb-carousel-item>
+                      <img class="d-block w-100" src="./assets/images/jeroo1.jpg" alt="First slide">
+                    </mdb-carousel-item>
+                    <mdb-carousel-item>
+                      <img class="d-block w-100" src="./assets/images/jeroo2.jpg" alt="Second slide">
+                    </mdb-carousel-item>
+                    <mdb-carousel-item>
+                      <img class="d-block w-100" src="./assets/images/jeroo3.jpg" alt="Third slide">
+                    </mdb-carousel-item>
+                  </mdb-carousel>
+                  <br>
+                  <p>During my final semester at the University of Nebraska at Omaha me and three other students worked closely with a 
+                    professor to create and deliver a modern and responsive mobile version of an old java program. Jeroo was created as a teacher's tool
+                    to help students learn the foundations of computer science using a simplified version of modern languages. Using a simplified version of 
+                    Java, Python, or Visual Basic teachers and students can write programs to move characters around the grid. This grid can also be edited to 
+                    place obstacles and objectives for the characters to interact with. These activities involve avoiding nets and water and placing or picking up 
+                    flowers that have been placed on the board. Using this tool allows teachers to demonstrate loops, conditional statements, instantiation, and 
+                    other computer science principles easily with a visual element.</p>
+                    
+                  <p>Using Angular 7, Typescript, and OCaml we ported the java program to a client-side web application. It was important that the old and new 
+                    applications would work together to make an easy transition for teachers, so most of the original functionality was maintained. Examples include 
+                    being able to load and save both source files as well as the board files, runtime speed adjustability, and line highlighting to emphasize the current 
+                    action being performed by the compiler.</p>
+
+                  <p>In addition to the old functionality, our team added a few new improvements to increase the scope and usability of the tool. One of the largest 
+                    improvements we made was the syntax highlighter in the code edit. Using a Javascript package we were able to create a custom set of text highlighting 
+                    rules using the custom languages that are used within Jeroo. Now, when inputting code, text will be highlighted according to the language conventions 
+                    and certain text will auto complete. Additionally, we added the ability for the board to be a customizable size, this allows the amount of different 
+                    boards that can be created to be much larger, adding more range to what can be taught.</p>
+
+                  <p>Due to copyright on the original application, the source code for the new project is only available to a select few. Although, I would be glad to talk about how 
+                    we approached most of the work we did on the application.</p>
+                  <hr>
+                  <h3>Github</h3>
+                  <h6><a href="https://github.com/caelanb">https://github.com/caelanb</a></h6>
+                  <br>
+                  <p>My github includes various projects from over the years. You can view most of my school work that I completed while obtaining my undergraduate degree, as well 
+                    as some of the new projects I'm working on.
+                  </p>
+                  <hr>
+                  <h3>Additional Projects</h3>
+                  <p>I am currently working on other side projects, so be sure to check back for more in the future.</p>
+                </div>
+              </ng-container>
+      
+              <ng-container *ngIf="showToolbarNav == true">
+                <div class="about-section-mobile">
+                  <h3>Jeroo Web</h3>
+                  <h6><a href="https://jeroo.org/beta">https://jeroo.org/beta</a></h6>
+                  <br>
+                  <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+                    <mdb-carousel-item>
+                      <img class="d-block w-100" src="./assets/images/jeroo1.jpg" alt="First slide">
+                    </mdb-carousel-item>
+                    <mdb-carousel-item>
+                      <img class="d-block w-100" src="./assets/images/jeroo2.jpg" alt="Second slide">
+                    </mdb-carousel-item>
+                    <mdb-carousel-item>
+                      <img class="d-block w-100" src="./assets/images/jeroo3.jpg" alt="Third slide">
+                    </mdb-carousel-item>
+                  </mdb-carousel>
+                  <br>
+                  <p>During my final semester at the University of Nebraska at Omaha me and three other students worked closely with a 
+                    professor to create and deliver a modern and responsive mobile version of an old java program. Jeroo was created as a teacher's tool
+                    to help students learn the foundations of computer science using a simplified version of modern languages. Using a simplified version of 
+                    Java, Python, or Visual Basic teachers and students can write programs to move characters around the grid. This grid can also be edited to 
+                    place obstacles and objectives for the characters to interact with. These activities involve avoiding nets and water and placing or picking up 
+                    flowers that have been placed on the board. Using this tool allows teachers to demonstrate loops, conditional statements, instantiation, and 
+                    other computer science principles easily with a visual element.</p>
+                    
+                  <p>Using Angular 7, Typescript, and OCaml we ported the java program to a client-side web application. It was important that the old and new 
+                    applications would work together to make an easy transition for teachers, so most of the original functionality was maintained. Examples include 
+                    being able to load and save both source files as well as the board files, runtime speed adjustability, and line highlighting to emphasize the current 
+                    action being performed by the compiler.</p>
+
+                  <p>In addition to the old functionality, our team added a few new improvements to increase the scope and usability of the tool. One of the largest 
+                    improvements we made was the syntax highlighter in the code edit. Using a Javascript package we were able to create a custom set of text highlighting 
+                    rules using the custom languages that are used within Jeroo. Now, when inputting code, text will be highlighted according to the language conventions 
+                    and certain text will auto complete. Additionally, we added the ability for the board to be a customizable size, this allows the amount of different 
+                    boards that can be created to be much larger, adding more range to what can be taught.</p>
+
+                  <p>Due to copyright on the original application, the source code for the new project is only available to a select few. Although, I would be glad to talk about how 
+                    we approached most of the work we did on the application.</p>
+                  <hr>
+                  <h3>Github</h3>
+                  <h6><a href="https://github.com/caelanb">https://github.com/caelanb</a></h6>
+                  <br>
+                  <p>My github includes various projects from over the years. You can view most of my school work that I completed while obtaining my undergraduate degree, as well 
+                    as some of the new projects I'm working on.
+                  </p>
+                  <hr>
+                  <h3>Additional Projects</h3>
+                  <p>I am currently working on other side projects, so be sure to check back for more in the future.</p>
+                </div>
+              </ng-container>
+            </div>
           </mat-sidenav-content>
     </mat-sidenav-container>

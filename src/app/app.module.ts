@@ -14,6 +14,8 @@ import { ResumeComponent } from './resume/resume.component';
 
 import { CommonModule } from '@angular/common';
 
+import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +30,8 @@ import { CommonModule } from '@angular/common';
     FontAwesomeModule,
     BrowserAnimationsModule,
     CommonModule,
+    CarouselModule,
+    WavesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
