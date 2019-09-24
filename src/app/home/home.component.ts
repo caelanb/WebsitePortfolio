@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import { faLinkedin, faFacebookSquare, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faFacebookSquare, faGithubSquare, faHackerrank } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelopeSquare, faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   faGithubSquare = faGithubSquare;
   faEnvelopeSquare = faEnvelopeSquare;
   faBars = faBars;
+  faHackerrank = faHackerrank;
   opened: boolean;
   showToolbarNav: boolean;
   innerWidth: any;
