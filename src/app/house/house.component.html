@@ -1,0 +1,209 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<mat-sidenav-container fullscreen>
+    <mat-sidenav #sidenav position="end" [(opened)]="opened">
+        <button mat-button (click)='onProjectsClick()'>PROJECTS</button>
+        <br>
+        <button mat-button (click)='onResumeClick()'>RESUME</button>
+    </mat-sidenav>
+      
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <a [routerLink]="['/home']"><span class='toolbar-name'><b>CAELAN BRYAN</b></span></a>
+            <ng-container *ngIf="showToolbarNav == false">
+                <span class="toolbar-spacer"></span>
+                <span><button mat-button (click)='onProjectsClick()'>PROJECTS</button></span>
+                <span class="navigation-spacer"></span>
+                <span><button mat-button (click)='onResumeClick()'>RESUME</button></span>
+            </ng-container>
+            <ng-container *ngIf="showToolbarNav == true">
+                <span class="toolbar-spacer"></span>
+                <span><fa-icon [icon]="faBars" (click)="sidenav.toggle()" size="1.5x"></fa-icon></span>
+            </ng-container>
+        </mat-toolbar>
+    
+        <div class="banner">
+            <div>
+                <h2>House</h2>
+            </div>
+        </div>
+
+        <div class="about-container">
+            <ng-container *ngIf="showToolbarNav == false">
+                <div class="house-pic-section">
+                    <br>
+                    <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og1.JPEG" alt="First slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new1.JPEG" alt="First slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og2.JPEG" alt="Second slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new2.JPEG" alt="Second slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og3.JPEG" alt="Third slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new3.JPEG" alt="Third slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og4.JPEG" alt="Fourth slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new4.JPEG" alt="Fourth slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og5.JPEG" alt="Fifth slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new5.JPEG" alt="Fifth slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og6.JPEG" alt="Sixth slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new6.JPEG" alt="Sixth slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og7.JPEG" alt="Seventh slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new7.JPEG" alt="Seventh slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og8.JPEG" alt="Eigth slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new8.JPEG" alt="Eigth slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og9.JPEG" alt="Ninth slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new9.JPEG" alt="Ninth slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og10.JPEG" alt="Tenth slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new10.JPEG" alt="Tenth slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og11.JPEG" alt="Eleventh slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new11.JPEG" alt="Eleventh slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og12.JPEG" alt="Twelvth slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new12.JPEG" alt="Twelvth slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new13.JPEG" alt="Thirteenth slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new14.JPEG" alt="Fourteenth slide after">
+                        </mdb-carousel-item>
+                    </mdb-carousel>
+                    <br>
+                </div>
+            </ng-container>
+    
+            <ng-container *ngIf="showToolbarNav == true">
+                <div class="house-pic-section-mobile">
+                    <br>
+                    <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og1.JPEG" alt="First slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new1.JPEG" alt="First slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og2.JPEG" alt="Second slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new2.JPEG" alt="Second slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og3.JPEG" alt="Third slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new3.JPEG" alt="Third slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og4.JPEG" alt="Fourth slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new4.JPEG" alt="Fourth slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og5.JPEG" alt="Fifth slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new5.JPEG" alt="Fifth slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og6.JPEG" alt="Sixth slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new6.JPEG" alt="Sixth slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og7.JPEG" alt="Seventh slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new7.JPEG" alt="Seventh slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og8.JPEG" alt="Eigth slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new8.JPEG" alt="Eigth slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og9.JPEG" alt="Ninth slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new9.JPEG" alt="Ninth slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og10.JPEG" alt="Tenth slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new10.JPEG" alt="Tenth slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og11.JPEG" alt="Eleventh slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new11.JPEG" alt="Eleventh slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/og12.JPEG" alt="Twelvth slide before">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new12.JPEG" alt="Twelvth slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new13.JPEG" alt="Thirteenth slide after">
+                        </mdb-carousel-item>
+                        <mdb-carousel-item>
+                            <img class="d-block w-100" src="./assets/images/new14.JPEG" alt="Fourteenth slide after">
+                        </mdb-carousel-item>
+                    </mdb-carousel>
+                    <br>
+                </div>
+            </ng-container>
+        </div>
+    
+          
+    </mat-sidenav-content>
+</mat-sidenav-container>

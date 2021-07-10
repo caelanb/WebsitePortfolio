@@ -15,13 +15,15 @@ import { ResumeComponent } from './resume/resume.component';
 import { CommonModule } from '@angular/common';
 
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
+import { HouseComponent } from './house/house.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProjectsComponent,
-    ResumeComponent
+    ResumeComponent,
+    HouseComponent
   ],
   imports: [
     BrowserModule,
