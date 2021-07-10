@@ -5,12 +5,14 @@ import { ProjectsComponent } from './projects/projects.component';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { ResumeComponent } from './resume/resume.component';
+import { HouseComponent } from './house/house.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'projects', component: ProjectsComponent },
   { path: 'resume', component: ResumeComponent },
+  { path: 'house', component: HouseComponent}
 ];
 
 @NgModule({
