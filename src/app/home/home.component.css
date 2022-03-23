@@ -88,35 +88,35 @@ a {
     width: 95%;
 }
 
-.devicon-java-plain-wordmark.full {
+.devicon-csharp-plain.full {
     font-size: 3rem;
 }
 
-.devicon-java-plain-wordmark.mobile {
+.devicon-csharp-plain.mobile {
     font-size: 2.5rem;
 }
 
-.devicon-python-plain-wordmark.full {
+.devicon-python-plain.full {
     font-size: 3rem;
 }
 
-.devicon-python-plain-wordmark.mobile {
+.devicon-python-plain.mobile {
     font-size: 2.5rem;
 }
 
-.devicon-c-plain-wordmark.full {
+.devicon-r-plain.full {
     font-size: 3rem;
 }
 
-.devicon-c-plain-wordmark.mobile {
+.devicon-r-plain.mobile {
     font-size: 2.5rem;
 }
 
-.devicon-cplusplus-plain-wordmark.full {
+.devicon-java-plain.full {
     font-size: 3rem;
 }
 
-.devicon-cplusplus-plain-wordmark.mobile {
+.devicon-java-plain.mobile {
     font-size: 2.5rem;
 }
 
@@ -128,73 +128,70 @@ a {
     font-size: 2.5rem;
 }
 
-.devicon-windows8-original.full {
+.devicon-rstudio-plain.full {
     font-size: 3rem;
 }
 
-.devicon-windows8-original.mobile {
+.devicon-rstudio-plain.mobile {
     font-size: 2.5rem;
 }
 
-.devicon-linux-plain.full {
+.devicon-dot-net-plain.full {
     font-size: 3rem;
 }
 
-.devicon-linux-plain.mobile {
+.devicon-dot-net-plain.mobile {
     font-size: 2.5rem;
 }
 
-.devicon-apple-original.full {
+.devicon-angularjs-plain.full {
     font-size: 3rem;
 }
 
-.devicon-apple-original.mobile {
+.devicon-angularjs-plain.mobile {
     font-size: 2.5rem;
 }
 
-.devicon-django-plain-wordmark.full {
+.devicon-microsoftsqlserver-plain.full {
     font-size: 3rem;
 }
 
-.devicon-django-plain-wordmark.mobile {
+.devicon-microsoftsqlserver-plain.mobile {
     font-size: 2.5rem;
 }
 
-.devicon-angularjs-plain-wordmark.full {
+.devicon-github-original.full {
     font-size: 3rem;
 }
 
-.devicon-angularjs-plain-wordmark.mobile {
+.devicon-github-original.mobile {
     font-size: 2.5rem;
 }
 
-.devicon-github-plain-wordmark.full {
+.devicon-azure-plain.full {
     font-size: 3rem;
 }
 
-.devicon-github-plain-wordmark.mobile {
+.devicon-azure-plain.mobile {
     font-size: 2.5rem;
 }
 
-.devicon-gitlab-plain-wordmark.full {
+.devicon-visualstudio-plain.full {
     font-size: 3rem;
 }
 
-.devicon-gitlab-plain-wordmark.mobile {
-    font-size: 2.5rem;
-}
-
-.devicon-mysql-plain-wordmark.full {
-    font-size: 3rem;
-}
-
-.devicon-mysql-plain-wordmark.mobile {
+.devicon-visualstudio-plain.mobile {
     font-size: 2.5rem;
 }
 
 .icon-spacer {
     display: inline-block;
     margin: 10px;
+}
+
+.icon-spacer2 {
+    display: inline-block;
+    margin: 5px;
 }
 
 h4 {
