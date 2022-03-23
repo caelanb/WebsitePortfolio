@@ -12,6 +12,16 @@
     justify-content: center;
 }
 
+.banner-bottom {
+    background-color: cyan;
+    text-align: center;
+    height: 50px;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .toolbar-spacer {
     flex: 1 1 auto;
 }
@@ -216,4 +226,9 @@ span {
 .i {
     height: auto;
     width: auto;
+}
+
+.matPanelSchoolInformation {
+    font-style: italic;
+    color: grey;
 }

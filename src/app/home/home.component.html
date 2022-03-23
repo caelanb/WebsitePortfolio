@@ -29,16 +29,17 @@
       <div class="banner">
         <div>
             <img alt="portfolio-picture" src="./assets/images/homepage-image.png">
+            <h1></h1>
             <h2>Caelan Bryan</h2>
-            <h3><i>Junior Software Engineer</i></h3>
+            <h5><i>Software Engineer and Aspiring Data Scientist</i></h5>
             <br>
-            <a href="https://www.linkedin.com/in/caelan-bryan-9748a7161/"><fa-icon [icon]="faLinkedIn" size="2x"></fa-icon></a>
+            <a href="https://www.linkedin.com/in/caelan-bryan-9748a7161/" target="_blank"><fa-icon [icon]="faLinkedIn" size="2x"></fa-icon></a>
             <span class="icon-spacer"></span>
-            <a href="https://github.com/caelanb"><fa-icon [icon]="faGithubSquare" size="2x"></fa-icon></a>
+            <a href="https://github.com/caelanb" target="_blank"><fa-icon [icon]="faGithubSquare" size="2x"></fa-icon></a>
             <span class="icon-spacer"></span>
-            <a href="https://www.hackerrank.com/caelanbryan"><fa-icon [icon]="faHackerrank" size="2x"></fa-icon></a>
+            <a href="https://www.hackerrank.com/caelanbryan" target="_blank"><fa-icon [icon]="faHackerrank" size="2x"></fa-icon></a>
             <span class="icon-spacer"></span>
-            <a href="https://www.facebook.com/profile.php?id=100008336800595"><fa-icon [icon]="faFacebookSquare" size="2x"></fa-icon></a>
+            <a href="https://www.facebook.com/profile.php?id=100008336800595" target="_blank"><fa-icon [icon]="faFacebookSquare" size="2x"></fa-icon></a>
             <span class="icon-spacer"></span>
             <a href="mailto:caelanbryan@gmail.com"><fa-icon [icon]="faEnvelopeSquare" size="2x"></fa-icon></a>
             
@@ -46,11 +47,7 @@
       </div>
 
       <div class="about-container">
-        
-
-
-
-
+      
         <ng-container *ngIf="showToolbarNav == false">
         <div class="about-section">
           <h3>About Me</h3>
@@ -103,7 +100,95 @@
            </div>
           <hr>
           <h3>Relevant Coursework</h3>
-          <mat-tab-group>
+          <mat-tab-group [dynamicHeight]='true' style='min-height: 500px;'>
+              <mat-tab label="Data Science">
+                <mat-accordion>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Advanced Probability and Inferences
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Summer 2021</div>
+                    <div style="float: right" class="matPanelSchoolInformation">Grade: A</div>
+                    <div style="margin: 0 auto; width 100px; text-align: center" class="matPanelSchoolInformation">University of West Florida</div>
+                    <br>
+                    Advanced topics in probability, limit theorems, limiting distributions, order statistics, weak law of large numbers, strong law of large numbers, 
+                    central limit theorem. Advanced topics in point and interval estimation, measures of quality of estimates, Exponential families, Completeness, 
+                    Unbiasedness, Cramer-Rao inequality, Rao-Blackwell theorem, minimum variance unbiased estimators, maximum likelihood estimators principles, 
+                    Bayes' and minimax estimation, Robust estimation; Advanced hypothesis testing.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Database Systems
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Summer 2021</div>
+                    <div style="float: right" class="matPanelSchoolInformation">Grade: A</div>
+                    <div style="margin: 0 auto; width 100px; text-align: center" class="matPanelSchoolInformation">University of West Florida</div>
+                    <br>
+                    Introduction to database systems and database management system architectures. Various database models are discussed with emphasis on the relational 
+                    model and relational database design.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Stats Modeling
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Fall 2021</div>
+                    <div style="float: right" class="matPanelSchoolInformation">Grade: A</div>
+                    <div style="margin: 0 auto; width 100px; text-align: center" class="matPanelSchoolInformation">University of West Florida</div>
+                    <br>
+                    This course will provide further examination of statistics and data analysis beyond an introductory course. Topics covered include data visualization, 
+                    point, and interval estimation, hypothesis testing of means, variances, and proportions, and linear and logistic regressions. Emphasis will be placed 
+                    on conducting reproducible research.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Big Data Mining: A Managerial Perspective
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Fall 2021</div>
+                    <div style="float: right" class="matPanelSchoolInformation">Grade: A</div>
+                    <div style="margin: 0 auto; width 100px; text-align: center" class="matPanelSchoolInformation">University of West Florida</div>
+                    <br>
+                    Covers the new management paradigm of data-driven decision making from both a technology and managerial perspective. Principles of big data and data 
+                    mining will be discussed in class lectures and employed through assignments and projects.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Modeling in Regression
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2022</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of West Florida</div>
+                    <br>
+                    <br>
+                    Several advanced topics in regression are covered, such as nonlinear regression, influence diagnostics, Eigensystem analysis of X'X matrix, logistic 
+                    regression, ridge regression, robust regression, and generalized linear models.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Complex Networks
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2022</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of West Florida</div>
+                    <br>
+                    <br>
+                    The course provides an introduction to complex network theory and its applications in physics, biology, technology and social sciences. Basic graph theory 
+                    and the statistical physics foundations as well as applications to real world networks will be covered. A hands-on approach to analytical and computational 
+                    techniques for real world networks will be provided. Topics to be covered include the mathematics of networks (graph theory), data analysis, and 
+                    applications to biology, sociology, technology, and other fields. Students will learn about the ongoing research in the field, and ultimately apply their 
+                    knowledge to conduct their own analysis of a real network data set of their choosing as part of the final project.
+                  </mat-expansion-panel>
+                </mat-accordion>
+              </mat-tab>
               <mat-tab label="Computer Science">
                 <mat-accordion>
                   <mat-expansion-panel>
@@ -112,7 +197,37 @@
                         Data Structures
                       </mat-panel-title>
                     </mat-expansion-panel-header>
-                    Runtime analysis, sorting algorithms, and common data structures (binary trees, stacks, queues, etc)
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2017</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This is a core that will cover a number of data structures such as tree, hashing, priority queues and graphs as well as different algorithm design methods by 
+                    examining common problem-solving techniques.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Introduction to Digital Design
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Fall 2017</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    The course is intended to introduce the students to the topics found in introductory digital design and computer organization classes.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Communication Networks
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2018</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course is designed to bring students up to the state of the art in networking technologies with a focus on Internet. It will cover the principles of 
+                    networking with an emphasis on protocols, implementations and design issues.
                   </mat-expansion-panel>
                   <mat-expansion-panel>
                     <mat-expansion-panel-header>
@@ -120,7 +235,13 @@
                         Theory of Computation
                       </mat-panel-title>
                     </mat-expansion-panel-header>
-                    Non-deterministic and deterministic finite automatons, regular languages, and turing machines
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2018</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    The course is intended to introduce the students to the theory of computation in a fashion that emphasizes breadth and away from detailed analysis found in a 
+                    normal undergraduate automata course. The topics covered in the course include methods of proofs, finite automata, non-determinism, regular expressions, 
+                    context-free grammars, pushdown automata, no-context free languages, Church-Turing Thesis, decidability, reducibility, and space and time complexity.
                   </mat-expansion-panel>
                   <mat-expansion-panel>
                     <mat-expansion-panel-header>
@@ -128,7 +249,26 @@
                         Operating Systems
                       </mat-panel-title>
                     </mat-expansion-panel-header>
-                    Multithreaded programming and common hardware limitations on modern computers
+                    <div style="float: left" class="matPanelSchoolInformation">Summer 2018</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    Operating system principles. The operating system as a resource manager; I/O programming, interrupt programming and machine architecture as it relates to 
+                    resource management; memory management techniques for uni-multiprogrammed systems; process description and implementation; processor management (scheduling); 
+                    I/O device, controller, and channel management; file systems. Operating system implementation for large and small machines.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Computer Architecture
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Summer 2018</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    The course deals with: Computer evolution, top view of processor design, cache memory and organization, hierarchical memory design and management, 
+                    performance metrics, RISC versus CISC architecture, and pipeline computer design and architecture. The course also covers analytic design alternatives as needed.
                   </mat-expansion-panel>
                   <mat-expansion-panel>
                     <mat-expansion-panel-header>
@@ -136,15 +276,39 @@
                         Principles of Programming Languages
                       </mat-panel-title>
                     </mat-expansion-panel-header>
-                    Syntax trees, parse trees, and functional programming
+                    <div style="float: left" class="matPanelSchoolInformation">Fall 2018</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course covers the foundational concepts and principles underlying the design and implementation of programming languages. Language constructs including 
+                    assignment, equality, references, aggregations, scope, encapsulation, and parameter passing are discussed. A central theme is how a particular language 
+                    construct relates to the concept of equational reasoning (referential transparency). Formal notations for describing syntax and semantics are presented.
                   </mat-expansion-panel>
                     <mat-expansion-panel>
                       <mat-expansion-panel-header>
                         <mat-panel-title>
-                          Software Engineering
+                          Introduction to Software Engineering
                         </mat-panel-title>
                       </mat-expansion-panel-header>
-                      Proper development practices
+                      <div style="float: left" class="matPanelSchoolInformation">Fall 2018</div>
+                      <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                      <br>
+                      <br>
+                      Basic concepts and major issues of software engineering, current tools and techniques providing a basis for analyzing, designing, developing, maintaining 
+                      and evaluating the system. Technical, administrative and operating issues. Privacy, security and legal issues.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                          Advanced Java Programming
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2019</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course teaches students web application development using advanced concepts in the Java programming language. It introduces students to distributed 
+                    computing models such as the client-server model and how it is implemented in web applications using modern Java technology stacks.
                   </mat-expansion-panel>
                 </mat-accordion>
               </mat-tab>
@@ -153,26 +317,63 @@
                   <mat-expansion-panel>
                     <mat-expansion-panel-header>
                       <mat-panel-title>
-                        Windows Administration
+                        Introduction to Information Security
                       </mat-panel-title>
                     </mat-expansion-panel-header>
-                    Created and maintained a Windows Server 2008 instance
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2017</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course emphasizes our current dependence on information technology and how its security in cyberspace (or lack thereof) is shaping the global landscape. 
+                    Several historical and contemporary global events that have been influenced by the exploitation of information technology motivates topics on cyber crime, 
+                    malware, intrusion detection, cryptography, among others, and how to secure one's own data and computer system. Several aspects of this course are geared 
+                    towards developing an understanding of the "cyberspace" as a new medium that breaks all geographical boundaries, while highlighting noticeable influences on 
+                    it from social, political, economic and cultural factors of a geographical region.
                   </mat-expansion-panel>
                   <mat-expansion-panel>
                     <mat-expansion-panel-header>
                       <mat-panel-title>
-                        Information Security Policy
+                        Security Administration - Windows
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2018</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course covers topics a system administrator would encounter in their profession. The student will learn how a system administrator fulfills various 
+                    organizational information resource management requirements using the Windows Operating System. Topics will include; installation; creating and maintaining 
+                    file systems; user and group administration; backup and restore processes; network configuration; various system services; simple security administration; 
+                    and updating and maintaining the system.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Information Security Policy and Awareness
                       </mat-panel-title>
                   </mat-expansion-panel-header>
-                  Security practices and writing policies for large companies
+                  <div style="float: left" class="matPanelSchoolInformation">Spring 2018</div>
+                  <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                  <br>
+                  <br>
+                  This course will cover the planning and development for information governance, security policies and procedures, and security awareness. 
                   </mat-expansion-panel>
                   <mat-expansion-panel>
                     <mat-expansion-panel-header>
                       <mat-panel-title>
-                        Computer Forensics
+                        Digital Forensics
                       </mat-panel-title>
                     </mat-expansion-panel-header>
-                    Extracting data from devices that have been destroyed or where the data was deleted
+                    <div style="float: left" class="matPanelSchoolInformation">Fall 2018</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    Digital forensics involves the preservation, identification, extraction, analysis and documentation of digital evidence stored on a variety of electronic 
+                    devices. The aim of this course is to introduce students to acceptable approaches for collecting, analyzing and reporting data from a forensics investigation. 
+                    Topics include: an introduction to digital forensics, data acquisition, first response, memory forensics, operating system forensics, and network forensics. 
+                    Students will be required to perform several forensics analyses in a controlled lab environment, including acquiring forensically sound hard drive images, 
+                    memory images and analyzing these using industry standard tools, such as Forensic Toolkit (FTK). The Digital Forensics class is designed for Cybersecurity, 
+                    Computer Science and other qualified students to learn what actions are both appropriate and required for preserving, collecting and analyzing digital 
+                    evidence in cases of intrusion, data theft or other cybercrimes.
                   </mat-expansion-panel>
                   <mat-expansion-panel>
                     <mat-expansion-panel-header>
@@ -180,7 +381,13 @@
                         Foundations of Information Assurance
                       </mat-panel-title>
                     </mat-expansion-panel-header>
-                    Final overview of cybersecurity
+                    <div style="float: left" class="matPanelSchoolInformation">Fall 2018</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    Contemporary issues in computer security, including sources for computer security threats and appropriate reactions; basic encryption and decryption; 
+                    secure encryption systems; program security, trusted operating systems; database security, network and distributed systems security, administering 
+                    security; legal and ethical issues.
                   </mat-expansion-panel>
                 </mat-accordion>
               </mat-tab>
@@ -189,30 +396,98 @@
                   <mat-expansion-panel>
                     <mat-expansion-panel-header>
                       <mat-panel-title>
+                          Calculus I
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Fall 2015</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This is a course in plane analytic geometry emphasizing the study of functions, limits, derivatives and applications, and an introduction to integration.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
                           Mathematical Foundations of Computer Science
                       </mat-panel-title>
                     </mat-expansion-panel-header>
-                        Big-O notation and truth tables
-                      </mat-expansion-panel>
-                        <mat-expansion-panel>
-                          <mat-expansion-panel-header>
-                            <mat-panel-title>
-                                Numerical Methods
-                            </mat-panel-title>
-                          </mat-expansion-panel-header>
-                          Writing programs to approximate zeros, derivatives, and integrals
-                        </mat-expansion-panel>
-                          <mat-expansion-panel>
-                            <mat-expansion-panel-header>
-                              <mat-panel-title>
-                                  Number Theory and Cryptography
-                              </mat-panel-title>
-                            </mat-expansion-panel-header>
-                            Studied the integers and how certain truths explain why cryptography works
-                          </mat-expansion-panel>
-                          </mat-accordion>
+                    <div style="float: left" class="matPanelSchoolInformation">Fall 2016</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course introduces discrete mathematics concepts that are foundational for the study of computer science such as functions, relations, and sets, 
+                    basic logic, methods of proof, mathematical induction, computational complexity, recursion, counting, recurrences, and relations.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                          Calculus II
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Fall 2017</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course introduces applications of integration, techniques of integration, infinite sequences and series, vectors in the plane, and polar functions. 
+                    A mathematical software package is introduced, with required assignments.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                          Calculus III
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2018</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course presents vector functions, parametric equations, solid analytic geometry, partial differentiation, multiple integration, and an introduction to 
+                    vector calculus. A mathematical software package is introduced with required assignments.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                          Applied Linear Algebra
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2019</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course presents Matrix algebra, simultaneous equations, vector spaces, with applications of linear algebra and computational considerations. 
+                    Mathematical software is utilized, with required assignments.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                      Numerical Methods
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2019</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course involves solving nonlinear algebraic equations and systems of equations, interpolation and polynomial approximation, numerical differentiation 
+                    and integration, numerical solutions to ordinary differential equations, analysis of algorithms and errors, and computational efficiency.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                      Number Theory and Cryptography
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2019</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    An overview of one of the many beautiful areas of mathematics and its modern application to secure communication. The course is ideal for any student 
+                    who wants a taste of mathematics outside of, or in addition to, the calculus sequence. Topics to be covered include: prime numbers, congruences,
+                    perfect numbers, primitive roots, quadratic reciprocity, sums of squares, and Diophantine equations. Applications include error-correcting codes, 
+                    symmetric and public key cryptography, secret sharing, and zero knowledge proofs.
+                  </mat-expansion-panel>
+                </mat-accordion>
               </mat-tab>
-          </mat-tab-group>            
+        </mat-tab-group>            
         </div>
         </ng-container>
 
@@ -270,131 +545,398 @@
              </div>
             <hr>
             <h3>Relevant Coursework</h3>
-            <mat-tab-group>
-                <mat-tab label="Computer Science">
-                  <mat-accordion>
-                    <mat-expansion-panel>
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Data Structures
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      Runtime analysis, sorting algorithms, and common data structures (binary trees, stacks, queues, etc)
-                    </mat-expansion-panel>
-                    <mat-expansion-panel>
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Theory of Computation
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      Non-deterministic and deterministic finite automatons, regular languages, and turing machines
-                    </mat-expansion-panel>
-                    <mat-expansion-panel>
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Operating Systems
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      Multithreaded programming and common hardware limitations on modern computers
-                    </mat-expansion-panel>
-                    <mat-expansion-panel>
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Principles of Programming Languages
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      Syntax trees, parse trees, and functional programming
-                    </mat-expansion-panel>
-                      <mat-expansion-panel>
-                        <mat-expansion-panel-header>
-                          <mat-panel-title>
-                            Software Engineering
-                          </mat-panel-title>
-                        </mat-expansion-panel-header>
-                        Proper development practices
-                    </mat-expansion-panel>
-                  </mat-accordion>
-                </mat-tab>
-                <mat-tab label="Cybersecurity">
-                  <mat-accordion>
-                    <mat-expansion-panel>
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Windows Administration
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      Created and maintained a Windows Server 2008 instance
-                    </mat-expansion-panel>
-                    <mat-expansion-panel>
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Information Security Policy
-                        </mat-panel-title>
+            <mat-tab-group [dynamicHeight]='true' style='min-height: 500px;'>
+              <mat-tab label="Data Science">
+                <mat-accordion>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Advanced Probability and Inferences
+                      </mat-panel-title>
                     </mat-expansion-panel-header>
-                    Security practices and writing policies for large companies
-                    </mat-expansion-panel>
+                    <div style="float: left" class="matPanelSchoolInformation">Summer 2021</div>
+                    <div style="float: right" class="matPanelSchoolInformation">Grade: A</div>
+                    <div style="margin: 0 auto; width 100px; text-align: center" class="matPanelSchoolInformation">University of West Florida</div>
+                    <br>
+                    Advanced topics in probability, limit theorems, limiting distributions, order statistics, weak law of large numbers, strong law of large numbers, 
+                    central limit theorem. Advanced topics in point and interval estimation, measures of quality of estimates, Exponential families, Completeness, 
+                    Unbiasedness, Cramer-Rao inequality, Rao-Blackwell theorem, minimum variance unbiased estimators, maximum likelihood estimators principles, 
+                    Bayes' and minimax estimation, Robust estimation; Advanced hypothesis testing.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Database Systems
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Summer 2021</div>
+                    <div style="float: right" class="matPanelSchoolInformation">Grade: A</div>
+                    <div style="margin: 0 auto; width 100px; text-align: center" class="matPanelSchoolInformation">University of West Florida</div>
+                    <br>
+                    Introduction to database systems and database management system architectures. Various database models are discussed with emphasis on the relational 
+                    model and relational database design.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Stats Modeling
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Fall 2021</div>
+                    <div style="float: right" class="matPanelSchoolInformation">Grade: A</div>
+                    <div style="margin: 0 auto; width 100px; text-align: center" class="matPanelSchoolInformation">University of West Florida</div>
+                    <br>
+                    This course will provide further examination of statistics and data analysis beyond an introductory course. Topics covered include data visualization, 
+                    point, and interval estimation, hypothesis testing of means, variances, and proportions, and linear and logistic regressions. Emphasis will be placed 
+                    on conducting reproducible research.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Big Data Mining: A Managerial Perspective
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Fall 2021</div>
+                    <div style="float: right" class="matPanelSchoolInformation">Grade: A</div>
+                    <div style="margin: 0 auto; width 100px; text-align: center" class="matPanelSchoolInformation">University of West Florida</div>
+                    <br>
+                    Covers the new management paradigm of data-driven decision making from both a technology and managerial perspective. Principles of big data and data 
+                    mining will be discussed in class lectures and employed through assignments and projects.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Modeling in Regression
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2022</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of West Florida</div>
+                    <br>
+                    <br>
+                    Several advanced topics in regression are covered, such as nonlinear regression, influence diagnostics, Eigensystem analysis of X'X matrix, logistic 
+                    regression, ridge regression, robust regression, and generalized linear models.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Complex Networks
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2022</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of West Florida</div>
+                    <br>
+                    <br>
+                    The course provides an introduction to complex network theory and its applications in physics, biology, technology and social sciences. Basic graph theory 
+                    and the statistical physics foundations as well as applications to real world networks will be covered. A hands-on approach to analytical and computational 
+                    techniques for real world networks will be provided. Topics to be covered include the mathematics of networks (graph theory), data analysis, and 
+                    applications to biology, sociology, technology, and other fields. Students will learn about the ongoing research in the field, and ultimately apply their 
+                    knowledge to conduct their own analysis of a real network data set of their choosing as part of the final project.
+                  </mat-expansion-panel>
+                </mat-accordion>
+              </mat-tab>
+              <mat-tab label="Computer Science">
+                <mat-accordion>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Data Structures
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2017</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This is a core that will cover a number of data structures such as tree, hashing, priority queues and graphs as well as different algorithm design methods by 
+                    examining common problem-solving techniques.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Introduction to Digital Design
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Fall 2017</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    The course is intended to introduce the students to the topics found in introductory digital design and computer organization classes.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Communication Networks
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2018</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course is designed to bring students up to the state of the art in networking technologies with a focus on Internet. It will cover the principles of 
+                    networking with an emphasis on protocols, implementations and design issues.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Theory of Computation
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2018</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    The course is intended to introduce the students to the theory of computation in a fashion that emphasizes breadth and away from detailed analysis found in a 
+                    normal undergraduate automata course. The topics covered in the course include methods of proofs, finite automata, non-determinism, regular expressions, 
+                    context-free grammars, pushdown automata, no-context free languages, Church-Turing Thesis, decidability, reducibility, and space and time complexity.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Operating Systems
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Summer 2018</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    Operating system principles. The operating system as a resource manager; I/O programming, interrupt programming and machine architecture as it relates to 
+                    resource management; memory management techniques for uni-multiprogrammed systems; process description and implementation; processor management (scheduling); 
+                    I/O device, controller, and channel management; file systems. Operating system implementation for large and small machines.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Computer Architecture
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Summer 2018</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    The course deals with: Computer evolution, top view of processor design, cache memory and organization, hierarchical memory design and management, 
+                    performance metrics, RISC versus CISC architecture, and pipeline computer design and architecture. The course also covers analytic design alternatives as needed.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Principles of Programming Languages
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Fall 2018</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course covers the foundational concepts and principles underlying the design and implementation of programming languages. Language constructs including 
+                    assignment, equality, references, aggregations, scope, encapsulation, and parameter passing are discussed. A central theme is how a particular language 
+                    construct relates to the concept of equational reasoning (referential transparency). Formal notations for describing syntax and semantics are presented.
+                  </mat-expansion-panel>
                     <mat-expansion-panel>
                       <mat-expansion-panel-header>
                         <mat-panel-title>
-                          Computer Forensics
+                          Introduction to Software Engineering
                         </mat-panel-title>
                       </mat-expansion-panel-header>
-                      Extracting data from devices that have been destroyed or where the data was deleted
-                    </mat-expansion-panel>
-                    <mat-expansion-panel>
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Foundations of Information Assurance
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      Final overview of cybersecurity
-                    </mat-expansion-panel>
-                  </mat-accordion>
-                </mat-tab>
-                <mat-tab label="Mathematics">
-                  <mat-accordion>
-                      <mat-expansion-panel>
-                          <mat-expansion-panel-header>
-                            <mat-panel-title>
-                                Calculus 1 - 3
-                            </mat-panel-title>
-                          </mat-expansion-panel-header>
-                          Derivatives, Integrals, and Sums/Series in both 2D and 3D planes
-                        </mat-expansion-panel>
-                    <mat-expansion-panel>
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Mathematical Foundations of Computer Science
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                          Big-O notation and truth tables
-                        </mat-expansion-panel>
-                          <mat-expansion-panel>
-                            <mat-expansion-panel-header>
-                              <mat-panel-title>
-                                  Numerical Methods
-                              </mat-panel-title>
-                            </mat-expansion-panel-header>
-                            Writing programs to approximate zeros, derivatives, and integrals
-                          </mat-expansion-panel>
-                            <mat-expansion-panel>
-                              <mat-expansion-panel-header>
-                                <mat-panel-title>
-                                    Number Theory and Cryptography
-                                </mat-panel-title>
-                              </mat-expansion-panel-header>
-                              Studied the integers and how certain truths explain why cryptography works
-                            </mat-expansion-panel>
-                            </mat-accordion>
-                </mat-tab>
-            </mat-tab-group>            
+                      <div style="float: left" class="matPanelSchoolInformation">Fall 2018</div>
+                      <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                      <br>
+                      <br>
+                      Basic concepts and major issues of software engineering, current tools and techniques providing a basis for analyzing, designing, developing, maintaining 
+                      and evaluating the system. Technical, administrative and operating issues. Privacy, security and legal issues.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                          Advanced Java Programming
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2019</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course teaches students web application development using advanced concepts in the Java programming language. It introduces students to distributed 
+                    computing models such as the client-server model and how it is implemented in web applications using modern Java technology stacks.
+                  </mat-expansion-panel>
+                </mat-accordion>
+              </mat-tab>
+              <mat-tab label="Cybersecurity">
+                <mat-accordion>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Introduction to Information Security
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2017</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course emphasizes our current dependence on information technology and how its security in cyberspace (or lack thereof) is shaping the global landscape. 
+                    Several historical and contemporary global events that have been influenced by the exploitation of information technology motivates topics on cyber crime, 
+                    malware, intrusion detection, cryptography, among others, and how to secure one's own data and computer system. Several aspects of this course are geared 
+                    towards developing an understanding of the "cyberspace" as a new medium that breaks all geographical boundaries, while highlighting noticeable influences on 
+                    it from social, political, economic and cultural factors of a geographical region.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Security Administration - Windows
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2018</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course covers topics a system administrator would encounter in their profession. The student will learn how a system administrator fulfills various 
+                    organizational information resource management requirements using the Windows Operating System. Topics will include; installation; creating and maintaining 
+                    file systems; user and group administration; backup and restore processes; network configuration; various system services; simple security administration; 
+                    and updating and maintaining the system.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Information Security Policy and Awareness
+                      </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <div style="float: left" class="matPanelSchoolInformation">Spring 2018</div>
+                  <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                  <br>
+                  <br>
+                  This course will cover the planning and development for information governance, security policies and procedures, and security awareness. 
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Digital Forensics
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Fall 2018</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    Digital forensics involves the preservation, identification, extraction, analysis and documentation of digital evidence stored on a variety of electronic 
+                    devices. The aim of this course is to introduce students to acceptable approaches for collecting, analyzing and reporting data from a forensics investigation. 
+                    Topics include: an introduction to digital forensics, data acquisition, first response, memory forensics, operating system forensics, and network forensics. 
+                    Students will be required to perform several forensics analyses in a controlled lab environment, including acquiring forensically sound hard drive images, 
+                    memory images and analyzing these using industry standard tools, such as Forensic Toolkit (FTK). The Digital Forensics class is designed for Cybersecurity, 
+                    Computer Science and other qualified students to learn what actions are both appropriate and required for preserving, collecting and analyzing digital 
+                    evidence in cases of intrusion, data theft or other cybercrimes.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Foundations of Information Assurance
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Fall 2018</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    Contemporary issues in computer security, including sources for computer security threats and appropriate reactions; basic encryption and decryption; 
+                    secure encryption systems; program security, trusted operating systems; database security, network and distributed systems security, administering 
+                    security; legal and ethical issues.
+                  </mat-expansion-panel>
+                </mat-accordion>
+              </mat-tab>
+              <mat-tab label="Mathematics">
+                <mat-accordion>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                          Calculus I
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Fall 2015</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This is a course in plane analytic geometry emphasizing the study of functions, limits, derivatives and applications, and an introduction to integration.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                          Mathematical Foundations of Computer Science
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Fall 2016</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course introduces discrete mathematics concepts that are foundational for the study of computer science such as functions, relations, and sets, 
+                    basic logic, methods of proof, mathematical induction, computational complexity, recursion, counting, recurrences, and relations.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                          Calculus II
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Fall 2017</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course introduces applications of integration, techniques of integration, infinite sequences and series, vectors in the plane, and polar functions. 
+                    A mathematical software package is introduced, with required assignments.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                          Calculus III
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2018</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course presents vector functions, parametric equations, solid analytic geometry, partial differentiation, multiple integration, and an introduction to 
+                    vector calculus. A mathematical software package is introduced with required assignments.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                          Applied Linear Algebra
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2019</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course presents Matrix algebra, simultaneous equations, vector spaces, with applications of linear algebra and computational considerations. 
+                    Mathematical software is utilized, with required assignments.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                      Numerical Methods
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2019</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    This course involves solving nonlinear algebraic equations and systems of equations, interpolation and polynomial approximation, numerical differentiation 
+                    and integration, numerical solutions to ordinary differential equations, analysis of algorithms and errors, and computational efficiency.
+                  </mat-expansion-panel>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                      Number Theory and Cryptography
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div style="float: left" class="matPanelSchoolInformation">Spring 2019</div>
+                    <div style="float: right" class="matPanelSchoolInformation">University of Nebraska Omaha</div>
+                    <br>
+                    <br>
+                    An overview of one of the many beautiful areas of mathematics and its modern application to secure communication. The course is ideal for any student 
+                    who wants a taste of mathematics outside of, or in addition to, the calculus sequence. Topics to be covered include: prime numbers, congruences,
+                    perfect numbers, primitive roots, quadratic reciprocity, sums of squares, and Diophantine equations. Applications include error-correcting codes, 
+                    symmetric and public key cryptography, secret sharing, and zero knowledge proofs.
+                  </mat-expansion-panel>
+                </mat-accordion>
+              </mat-tab>
+        </mat-tab-group>             
           </div>
         </ng-container>
-
-
-
-
       </div>
+      <div class="banner-bottom"></div>
     </mat-sidenav-content>  
 </mat-sidenav-container>
 
